@@ -92,6 +92,7 @@ while True:
         pen.goto(-320,260) 
         pen.write(f"Pontjaid: {pontok}", align="center", font=("Arial", 20, "bold"))
 
+
     if urhajo.distance(meteor.xcor(), meteor.ycor()) < 70:
         meteor.shape(random.choice(shapes))
         meteor.setx(400)
@@ -102,17 +103,16 @@ while True:
         pen.color("red")
         pen.penup()
         pen.goto(0,260) 
-        pen.write(f"Találat: {elet}", align="center", font=("Arial",20,"bold"))  
+        pen.write(f"Találat: {elet}", align="center", font=("Arial",20,"bold"))
+
 
 
     if meteor.shape() == "meteor2.gif":
         meteor.setx(meteor.xcor()-15)
     elif meteor.shape() == "meteor1.gif":
         meteor.setx(meteor.xcor()-15)
-        meteor.sety(meteor.ycor()-15)
     else:
-        meteor.setx(meteor.xcor()-15)
-        meteor.sety(meteor.ycor()+15)
+        meteor.setx(meteor.xcor()+15)
     
     if elet == 3:
         space.clear()                                                                  
